@@ -7,13 +7,14 @@ import { Languages } from '../models/enums/languages.enum';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
+  currentLang = Languages.EN;
 
   @Output() public changeLang = new EventEmitter<string>();
 
-  get en() { return Languages.EN; }
-  get fa() { return Languages.FA; }
+  get nextLang() { return this.currentLang === Languages.EN ? Languages.FA : Languages.EN };
 
-  changeLanguage(selectedLang: Languages) {
-    this.changeLang.emit(selectedLang);
+  changeLanguage() {
+    this.currentLang = this.currentLang === Languages.EN ? Languages.FA : Languages.EN;
+    this.changeLang.emit(this.currentLang);
   }
 }

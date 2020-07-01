@@ -9,7 +9,7 @@
       <mat-icon>share</mat-icon>
     </button>
     <div>
-      <button mat-icon-button class="lang-btn" (click)="changeLanguage(en)">EN</button> | <button mat-icon-button class="lang-btn" (click)="changeLanguage(fa)">FA</button>
+      <button mat-icon-button class="lang-btn" (click)="changeLanguage()">{{ nextLang | uppercase }}</button>
     </div>
   </mat-toolbar-row>
 </mat-toolbar>
