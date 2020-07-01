@@ -1,0 +1,6 @@
+<div [dir]="textDir">
+    <app-header (changeLang)="onLanguageChange($event)"></app-header>
+    <div class="pages">
+        <router-outlet></router-outlet>
+    </div>
+</div>

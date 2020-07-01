@@ -1,0 +1,1 @@
+export enum Languages { EN = 'en', FA = 'fa' }
